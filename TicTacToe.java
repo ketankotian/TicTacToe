@@ -17,6 +17,7 @@ public class TicTacToe {
 
 		layout(board);
 		choice(user, comp);
+		showBoard();
 
 	}
 
@@ -24,7 +25,7 @@ public class TicTacToe {
 
 		for (int i = 0; i < board.length; i++) {
 			board[i] = ' ';
-			System.out.println(board);
+			System.out.print(board[i]);
 		}
 
 	}
@@ -33,15 +34,26 @@ public class TicTacToe {
 
 		switch (user) {
 		case 1:
-			System.out.println("User selected - X ");
+			System.out.println("User selected -> X ");
 			break;
-		case 2: 
-			System.out.println("User selected - Y ");
+		case 2:
+			System.out.println("User selected -> Y ");
 			break;
-		default :
+		default:
 			System.out.println("Invalid input");
-			
-}
+
+		}
+	}
+
+	static void showBoard() {
+		char[][] bord = new char[3][3];
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				System.out.print(bord[i][j] + "|");
+			}
+			System.out.println(" ");
+		}
+
 	}
 
 }
